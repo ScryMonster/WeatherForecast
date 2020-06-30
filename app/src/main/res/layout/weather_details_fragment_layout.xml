@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/iv_weather_details_header_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/windows_blue_alpha_0_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_weather_details_background"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/smoke_png_background_1_transparent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_weather_details_current_temperature"
+            style="@style/weather_details_current_temperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/weather_details_current_temperature_text_Appereance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="24" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_weather_details_city_name"
+            style="@style/weather_details_city_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/weather_details_city_name_textAppereance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_weather_details_current_temperature"
+            tools:text="Lviv" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_weather_details_description"
+            style="@style/weather_details_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/weather_details_description_textAppereance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_weather_details_city_name"
+            tools:text="Cloudy" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_weather_details_min_max_temperature"
+            style="@style/weather_details_min_max_temp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/weather_details_min_max_temperature_textAppereance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_weather_details_description"
+            tools:text="18/24" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+
+
+    <com.example.weatherforecast.utils.customView.WeatherDescriptionView
+        android:id="@+id/wd_weather_details_wind_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/weather_details_label"
+        app:wd_label="@string/wind_label"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_weather_details_header_container"/>
+
+
+    <com.example.weatherforecast.utils.customView.WeatherDescriptionView
+        android:id="@+id/wd_weather_details_humidity_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/weather_details_label"
+        app:wd_label="@string/humidity_label"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wd_weather_details_wind_section"/>
+
+
+    <com.example.weatherforecast.utils.customView.WeatherDescriptionView
+        android:id="@+id/wd_weather_details_pressure_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/weather_details_label"
+        app:wd_label="@string/pressure_label"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wd_weather_details_humidity_section"/>
+
+    <com.example.weatherforecast.utils.customView.WeatherDescriptionView
+        android:id="@+id/wd_weather_details_visibility_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/weather_details_label"
+        app:wd_label="@string/visibility_label"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wd_weather_details_pressure_section"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_weather_details_days"
+        style="@style/weather_details_forecast_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:itemCount="7"
+        tools:listitem="@layout/item_weather_forecast_layout" />
+    
+
+</androidx.constraintlayout.widget.ConstraintLayout>

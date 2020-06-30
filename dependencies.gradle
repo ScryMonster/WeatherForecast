@@ -1,0 +1,66 @@
+ext.versions = [
+        minSdkVersion          : 23,
+        targetSdkVersion       : 29,
+        compileSdkVersion      : 29,
+
+        supportDesignVersion   : '1.2.0-alpha08',
+        percentVersion         : '25.3.1',
+        cardViewVersion        : '1.0.0',
+        constraintLayoutVersion: '2.0.0-beta5',
+
+        glideVersion           : '4.11.0',
+
+        retrofit               : '2.8.0',
+        retrofitIntercaptor    : '4.6.0',
+
+        lifecycleVersion       : '2.2.0',
+        koinVersion            : '2.1.5',
+        ktxVersion             : '1.2.0',
+        roomVersion            : '2.2.5',
+        navigationArgsVersion  : '2.2.1',
+        navigationVersion      : '2.2.1'
+
+]
+
+ext.libs = [
+        supportDesign      : "com.google.android.material:material:$versions.supportDesignVersion",
+        constraintLayout   : "androidx.constraintlayout:constraintlayout:$versions.constraintLayoutVersion",
+        card               : "androidx.cardview:cardview:$versions.cardViewVersion",
+        appCompat          : "androidx.appcompat:appcompat:$versions.cardViewVersion",
+
+        //Kotlin
+        kotlin             : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version",
+        ktx                : "androidx.core:core-ktx:$versions.ktxVersion",
+
+        //AAC
+        viewModel          : "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycleVersion",
+        livedata           : "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycleVersion",
+        accProcessor       : "androidx.lifecycle:lifecycle-compiler:$versions.lifecycleVersion",
+        room               : "androidx.room:room-runtime:$versions.roomVersion",
+        roomProcessor      : "androidx.room:room-compiler:$versions.roomVersion",
+        roomEXt            : "androidx.room:room-ktx:$versions.roomVersion",
+        roomRx            : "androidx.room:room-rxjava2:$versions.roomVersion",
+
+        //Koin
+        koinAndroid        : "org.koin:koin-android:$versions.koinVersion",
+        koinScopes         : "org.koin:koin-androidx-scope:$versions.koinVersion",
+        koinViewModel      : "org.koin:koin-androidx-viewmodel:$versions.koinVersion",
+        koinKotlin         : "org.koin:koin-core:$versions.koinVersion",
+        koinKotlinExt      : "org.koin:koin-core-ext:$versions.koinVersion",
+        koinTest           : "org.koin:koin-test:$versions.koinVersion",
+
+        //Glide
+        glide              : "com.github.bumptech.glide:glide:$versions.glideVersion",
+        glideCompiler      : "com.github.bumptech.glide:compiler:$versions.glideVersion",
+
+        //Retrofit
+        retrofit           : "com.squareup.retrofit2:retrofit:$versions.retrofit",
+        retrofitGson       : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
+        retoritRX          : "com.squareup.retrofit2:adapter-rxjava2:$versions.retrofit",
+        retrofitInterceptor: "com.squareup.okhttp3:logging-interceptor:$versions.retrofitIntercaptor",
+
+        //Navigation
+        navSafeArg         : "androidx.navigation:navigation-safe-args-gradle-plugin:$versions.navigationArgsVersion",
+        navigation         : "androidx.navigation:navigation-fragment-ktx:$versions.navigationVersion",
+        navigationUI       : "androidx.navigation:navigation-ui-ktx:$versions.navigationVersion",
+]

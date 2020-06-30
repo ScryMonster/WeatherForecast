@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container_searched_city"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/sv_new_city"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_searched_city_weather_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/windows_blue_alpha_0_5"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/smoke_png_background_1_transparent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_searched_city_name"
+                style="@style/searched_city_start_elements"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:textAppearance="@style/searched_city_name_textAppereance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Lviv" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_searched_temperature"
+                style="@style/searched_city_start_elements"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/searched_city_elements_textAppereance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_searched_city_name"
+                tools:text="@string/min_max_temp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_searched_city_weather_description"
+                style="@style/searched_city_start_elements"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/searched_city_elements_textAppereance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_searched_temperature"
+                tools:text="Cloudy" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.cardview.widget.CardView>

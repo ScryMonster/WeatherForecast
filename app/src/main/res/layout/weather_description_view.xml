@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout"
+    tools:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_weather_description_view_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tv_weather_description_view_value"
+        style="@style/weather_details_label"
+        android:textAppearance="@style/weather_details_label_textAppereance"
+        tools:text="Label:"
+        app:layout_constraintHorizontal_weight="1"/>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_weather_description_view_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_weather_description_view_label"
+        tools:text="value"
+        android:textAppearance="@style/weather_details_label_textAppereance"
+        app:layout_constraintHorizontal_weight="3"/>
+
+
+
+
+</merge>

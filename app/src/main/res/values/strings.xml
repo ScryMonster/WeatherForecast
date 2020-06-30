@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Weather Forecast</string>
+    <string name="min_max_temp">%1$s&#176;/%2$s&#176;</string>
+    <string name="celcium_sign">%1$s&#176;</string>
+    <string name="toolbar_title">Your best Weather App</string>
+    <string name="message_city_was_saved">%1$s&#176; has been saved!</string>
+    <string name="message_city_was_deleted">%1$s&#176; has been deleted...</string>
+    <string name="message_city_has_been_already_saved">Sorry,this city has been already saved!</string>
+    <string name="wind_label">Wind:</string>
+    <string name="humidity_label">Humidity:</string>
+    <string name="pressure_label">Pressure:</string>
+    <string name="visibility_label">Visibility:</string>
+<!--    <string name="humidity_percentage">%1$s &#37;</string>-->
+    <string name="pressure_count">%1$s hPa</string>
+    <string name="km_hour_count">%1$s km/h</string>
+    <string name="km_count">%1$s km</string>
+    <string name="network_available">Network is available</string>
+    <string name="network_not_vailable">Network is not available</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="DoubleProgressView">
+        <attr name="innerColor" format="color"/>
+        <attr name="outerColor" format="color"/>
+        <attr name="thickness" format="dimension"/>
+        <attr name="anim_duration" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="WeatherDescriptionView">
+        <attr name="wd_label" format="string"/>
+    </declare-styleable>
+</resources>

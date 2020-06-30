@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffd589</color>
+    <color name="colorPrimaryDark">#ffcf76</color>
+    <color name="colorAccent">#CD5C5C</color>
+    <color name="windows_blue">#ff3d95c6</color>
+    <color name="windows_blue_alpha_0_5">#803d95c6</color>
+    <color name="windows_blue_alpha_0_25">#403d95c6</color>
+    <color name="soft_green">#FF8ad183</color>
+    <color name="indian_red">#CD5C5C</color>
+    <color name="black_alpha_0_5">#80000000</color>
+</resources>

@@ -1,0 +1,158 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+    
+    
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+    <style name="ProgressShadow">
+        <item name="android:background">@android:color/black</item>
+        <item name="android:alpha">0.2</item>
+    </style>
+
+    <style name="rotate_view">
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_width">80dp</item>
+    </style>
+
+    <style name="rotate_view.ProgressView">
+        <item name="innerColor">@color/soft_green</item>
+        <item name="outerColor">@color/windows_blue</item>
+        <item name="thickness">@dimen/progress_thickness</item>
+        <item name="anim_duration">5000</item>
+    </style>
+
+
+    <style name="searched_city_name_textAppereance">
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">0.3</item>
+        <item name="fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="searched_city_elements_textAppereance">
+        <item name="android:textSize">16sp</item>
+        <item name="fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="searched_city_start_elements">
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+
+    <style name="weather_details_current_temperature_text_Appereance" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="weather_details_current_temperature" parent="TextAppearance.AppCompat.Display2">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">40dp</item>
+    </style>
+
+
+    <style name="weather_details_city_name">
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="weather_details_city_name_textAppereance" parent="TextAppearance.AppCompat.Display2">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="weather_details_description">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="weather_details_description_textAppereance" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <style name="weather_details_min_max_temp">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+    <style name="weather_details_min_max_temperature_textAppereance" parent="TextAppearance.AppCompat.Body2">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <style name="weather_details_forecast_list">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">18dp</item>
+    </style>
+
+
+    <style name="weather_details_label">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="weather_details_label_textAppereance">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">sans-serif-light</item>
+    </style>
+
+
+    <style name="weather_forecast_main_items_textAppereance">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="weather_forecast_temperature">
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="weather_forecast_day_of_the_week">
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+    </style>
+
+
+    <style name="weather_forecast_description">
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginTop">4dp</item>
+
+    </style>
+
+    <style name="weather_forecast_description_textAppereance">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+
+
+
+
+
+
+</resources>

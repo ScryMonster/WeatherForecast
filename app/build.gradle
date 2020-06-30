@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: '../dependencies.gradle'
+apply plugin: 'kotlin-kapt'
+apply plugin: "androidx.navigation.safeargs.kotlin"
+apply plugin: 'kotlin-allopen'
+
+def TIMEOUT_SECONDS = 60
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+
+    defaultConfig {
+        applicationId "com.example.weatherforecast"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "int", "TIMEOUT_SECONDS", "$TIMEOUT_SECONDS"
+        buildConfigField "String", "BASE_URL", "\"https://community-open-weather-map.p.rapidapi.com/\""
+        buildConfigField "String", "HEADER_HOST", "\"community-open-weather-map.p.rapidapi.com\""
+        buildConfigField "String", "HEADER_KEY", "\"d9c370f544mshaf20bd5a2b0440ap13956djsn5db18529d267\""
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    allOpen {
+        annotation("com.example.weatherforecast.utils.Mockable")
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'com.google.android.material:material:1.3.0-alpha01'
+    implementation libs.supportDesign
+    implementation libs.constraintLayout
+    implementation libs.card
+    implementation libs.appCompat
+    implementation libs.ktx
+    implementation libs.navigation
+    implementation libs.navigationUI
+
+    implementation libs.viewModel
+    implementation libs.livedata
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    implementation 'com.jakewharton.rxbinding4:rxbinding-core:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-appcompat:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-material:4.0.0'
+
+
+
+    kapt libs.accProcessor
+    implementation libs.room
+    implementation libs.roomEXt
+    kapt libs.roomProcessor
+    implementation libs.roomRx
+
+    implementation libs.koinAndroid
+    implementation libs.koinScopes
+    implementation libs.koinViewModel
+    implementation libs.koinKotlin
+    implementation libs.koinKotlinExt
+
+    implementation libs.glide
+    kapt libs.glideCompiler
+
+    implementation libs.retrofit
+    implementation libs.retrofitGson
+    implementation libs.retoritRX
+    implementation libs.retrofitInterceptor
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    testImplementation 'org.koin:koin-test:2.1.5'
+    testImplementation 'androidx.test:runner:1.2.0'
+    testImplementation 'androidx.test:rules:1.2.0'
+    testImplementation 'androidx.test:core:1.2.0'
+    testImplementation 'android.arch.core:core-testing:1.1.1'
+    testImplementation("androidx.arch.core:core-testing:2.1.0") {
+        exclude group: 'org.mockito'
+    }
+    testImplementation 'org.mockito:mockito-core:2.28.2'
+    testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0'
+}
